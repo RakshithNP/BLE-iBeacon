@@ -1,13 +1,14 @@
 #!/bin/bash
+//new code line by raksh test line 1
+//lin2 
 
 show_usage() {
     echo "usage: $(basename $0) [UUID=<UUID|generate>] [DEVICE=<device(hci0)>] [NOSCAN=<yes|no(yes)>] [MAJOR=<major version(5)>] [MINOR=<minor version(6)>] [CONNECTABLE=<yes/no(no)>] [INTERVAL=<from-to interval in ms(500-1000)>]"
     exit 1
 }
-
 syslog() {
     logger ${SYSLOG_OPTS} -t "$SYSLOG_TAG" "$@"
-}
+} 
 
 log() {
     syslog -p daemon.notice "$@" 2>&1
